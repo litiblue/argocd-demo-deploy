@@ -8,5 +8,5 @@ spec:
       containers:
       - name: demo
         env:
-        - name: ENVIRONMENT
-          value: e2e
+        - name: MODEL_SERVER_URL
+          value: "http://58.229.121.146:8083"

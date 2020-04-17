@@ -15,7 +15,10 @@ spec:
         app: demo
     spec:
       containers:
-      - image: alexmt/argocd-demo:f27903964ba8e31ad89c31379e300a35fe1632a3
+      - image: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server:latest
         name: demo
         ports:
         - containerPort: 8080
+        env:
+        - name: MODEL_SERVER_URL
+          value: "http://58.229.121.146:8083"
