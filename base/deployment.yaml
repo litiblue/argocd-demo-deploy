@@ -1,22 +1,22 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: demo
+  name: karyotype-server
 spec:
-  replicas: 1
-  revisionHistoryLimit: 3
-  progressDeadlineSeconds: 30
+  # replicas: 1
+  # revisionHistoryLimit: 3
+  # progressDeadlineSeconds: 30
   selector:
     matchLabels:
-      app: demo
+      app: karyotype-server
   template:
     metadata:
       labels:
-        app: demo
+        app: karyotype-server
     spec:
       containers:
       - image: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server:latest
-        name: demo
+        name: karyotype-server
         ports:
         - containerPort: 8080
         env:
