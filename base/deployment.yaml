@@ -17,6 +17,7 @@ spec:
       containers:
       - image: 789949157452.dkr.ecr.ap-northeast-2.amazonaws.com/karyotype-server:latest
         name: karyotype-server
+        command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
         ports:
         - containerPort: 8080
         env:
